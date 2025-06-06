@@ -15,43 +15,55 @@
   --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Playfair Display", sans-serif;
   --nav-font: "Poppins", sans-serif;
-}
 
-/* Global Colors */
-:root { 
-  --background-color: #f9f9f9;           /* Soft light background for a modern, clean look */
-  --default-color: #333333;              /* Darker body text for better readability */
-  --heading-color: #1a1a1a;              /* Bold heading color to give prominence */
-  --accent-color: #005f73;              /* Muted teal for a modern, tech-feel accent */
-  --surface-color: #ffffff;              /* Cards, containers, sections */
-  --contrast-color: #ffffff;             /* Text color over accent backgrounds */
-}
+  /* Light Theme Colors */
+  --background-color: #fdfdfd;              /* Clean, soft light background */
+  --default-color: #2f2f2f;                 /* Strong readable text */
+  --heading-color: #1c1c1c;                 /* Bold heading color */
+  --accent-color: #ff6b6b;                  /* Coral red accent for vibrancy */
+  --surface-color: #ffffff;                 /* White surfaces for cards and sections */
+  --contrast-color: #ffffff;                /* Text color on accent background */
 
-/* Nav Menu Colors */
-:root {
-  --nav-color: rgba(0, 0, 0, 0.6);               /* Softer black for nav links */
-  --nav-hover-color: #005f73;                   /* Accent on hover to unify theme */
-  --nav-mobile-background-color: #ffffff;       /* Mobile menu stays clean */
+  /* Nav Menu Colors */
+  --nav-color: rgba(0, 0, 0, 0.65);         /* Slightly dimmed nav links */
+  --nav-hover-color: #ff6b6b;              /* Accent color on hover */
+  --nav-mobile-background-color: #ffffff;
   --nav-dropdown-background-color: #ffffff;
-  --nav-dropdown-color: #333333;
-  --nav-dropdown-hover-color: #007f91;          /* Slightly brighter variant on hover */
+  --nav-dropdown-color: #2f2f2f;
+  --nav-dropdown-hover-color: #ff8787;     /* Softer hover variant */
 }
 
+/* Dark Mode Override */
+.dark-mode {
+  --background-color: #1e1e1e;              /* Dark base background */
+  --default-color: #d1d1d1;                 /* Light gray text */
+  --heading-color: #ffffff;                 /* White for headings */
+  --accent-color: #ff8787;                  /* Bright coral for contrast */
+  --surface-color: #2a2a2a;                 /* Slightly lighter cards */
+  --contrast-color: #ffffff;                /* Ensures readability */
 
-/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
+  --nav-color: rgba(255, 255, 255, 0.7);    
+  --nav-hover-color: #ff8787;
+  --nav-mobile-background-color: #2a2a2a;
+  --nav-dropdown-background-color: #2a2a2a;
+  --nav-dropdown-color: #d1d1d1;
+  --nav-dropdown-hover-color: #ffb3b3;
+}
 
+/* Color Presets - Reusable section backgrounds */
 .light-background {
   --background-color: #f3f1f0;
   --surface-color: #ffffff;
 }
 
 .dark-background {
-  --background-color: #858484;
-  --default-color: #ffffff;
+  --background-color: #2c2c2c;
+  --default-color: #f0f0f0;
   --heading-color: #ffffff;
-  --surface-color: #9e9e9e;
+  --surface-color: #3a3a3a;
   --contrast-color: #ffffff;
 }
+
 
 /* Smooth scroll */
 :root {
