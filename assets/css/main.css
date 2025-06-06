@@ -12,30 +12,31 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Playfair Display",  sans-serif;
-  --nav-font: "Poppins",  sans-serif;
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Playfair Display", sans-serif;
+  --nav-font: "Poppins", sans-serif;
 }
 
-/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+/* Global Colors */
 :root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #898989; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #777777; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #b8a07e; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --background-color: #f9f9f9;           /* Soft light background for a modern, clean look */
+  --default-color: #333333;              /* Darker body text for better readability */
+  --heading-color: #1a1a1a;              /* Bold heading color to give prominence */
+  --accent-color: #005f73;              /* Muted teal for a modern, tech-feel accent */
+  --surface-color: #ffffff;              /* Cards, containers, sections */
+  --contrast-color: #ffffff;             /* Text color over accent backgrounds */
 }
 
-/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+/* Nav Menu Colors */
 :root {
-  --nav-color: rgba(255, 255, 255, 0.6);  /* The default color of the main navmenu links */
-  --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #898989; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #b8a07e; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: rgba(0, 0, 0, 0.6);               /* Softer black for nav links */
+  --nav-hover-color: #005f73;                   /* Accent on hover to unify theme */
+  --nav-mobile-background-color: #ffffff;       /* Mobile menu stays clean */
+  --nav-dropdown-background-color: #ffffff;
+  --nav-dropdown-color: #333333;
+  --nav-dropdown-hover-color: #007f91;          /* Slightly brighter variant on hover */
 }
+
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
