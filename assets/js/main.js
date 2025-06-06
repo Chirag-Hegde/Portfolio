@@ -102,6 +102,53 @@
   }
   window.addEventListener('load', aosInit);
 
+
+
+  const form = document.querySelector('.php-email-form');
+  const loading = form.querySelector('.loading');
+  const error = form.querySelector('.error-message');
+  const success = form.querySelector('.sent-message');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    loading.style.display = 'block';
+    error.style.display = 'none';
+    success.style.display = 'none';
+
+    const formData = new FormData(form);
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      loading.style.display = 'none';
+
+      if (res.ok) {
+        success.style.display = 'block';
+        form.reset();
+      } else {
+        const data = await res.json();
+        error.textContent = data.errors ? data.errors.map(e => e.message).join(', ') : "Oops! Something went wrong.";
+        error.style.display = 'block';
+      }
+    } catch (err) {
+      loading.style.display = 'none';
+      error.textContent = "Oops! A network error occurred.";
+      error.style.display = 'block';
+    }
+  });
+
+
+  const toggle = document.getElementById("darkModeToggle");
+  toggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+  });
+
   /**
    * Init typed.js
    */
